@@ -111,7 +111,7 @@ public class CrimeFragment extends Fragment {
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		if (resultCode != Activity.RESULT_OK) return;
-		if (resultCode == REQUEST_DATE){
+		if (requestCode == REQUEST_DATE){
 			Date date = (Date)data.getSerializableExtra(DatePickerFragment.EXTRA_DATE);
 			mCrime.setDate(date);
 			mDateButton.setText(mCrime.getDate().toString());
